@@ -29,6 +29,7 @@ create_tables()
 
 #Cors ke leye 
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
