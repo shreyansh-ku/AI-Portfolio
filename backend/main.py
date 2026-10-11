@@ -1,5 +1,6 @@
 from uuid import uuid4
 from pydantic import BaseModel, Field
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, UploadFile, File, HTTPException 
 from fastapi.middleware.cors import CORSMiddleware #BACKEND CORS
 from fastapi.responses import StreamingResponse
@@ -27,6 +28,7 @@ app = FastAPI(title="AI Portfolio API") #just like const app=express() for objec
 create_tables()
 
 #Cors ke leye 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -37,6 +39,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 def load_latest_candidate():
     global current_profile, current_candidate_id
