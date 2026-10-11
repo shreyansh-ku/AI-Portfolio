@@ -29,12 +29,14 @@ create_tables()
 #Cors ke leye 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://ai-portfolio-chi-rust.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 def load_latest_candidate():
     global current_profile, current_candidate_id
