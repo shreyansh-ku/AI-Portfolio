@@ -1,0 +1,23 @@
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+backend-git-backup/
+
+# Frontend
+node_modules/
+dist/
+
+# Local databases and uploads
+*.db
+*.sqlite
+*.sqlite3
+uploads/
